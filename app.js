@@ -12,6 +12,8 @@ const cors = require("cors");
 
 // Import Routes
 const authRoutes = require("./routes/auth/auth");
+const hotelRoutes = require("./routes/hotel/hotel");
+const bookingRoutes = require("./routes/booking/booking")
 
 dotenv.config();
 
@@ -28,3 +30,5 @@ app.use(express.json(), cors());
 
 // ROUTE MIDDLEWARE
 app.use("/api/users", authRoutes);
+app.use("/api/hotel", hotelRoutes);
+app.use("/api/booking", bookingRoutes);
